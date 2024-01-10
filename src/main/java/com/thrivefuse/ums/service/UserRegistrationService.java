@@ -26,6 +26,8 @@ public class UserRegistrationService {
         try {
              userRegistrationRepository.save(user);
         }catch (Exception ex){
+
+            System.out.println(ex.getMessage());
             return true;
         }
 
