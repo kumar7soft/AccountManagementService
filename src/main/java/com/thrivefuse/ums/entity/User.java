@@ -44,6 +44,9 @@ public class User {
     @Column(name = "zip")
     private String zip;
 
+    @Column(name="email")
+    private String email;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "pan_adhar_id", referencedColumnName = "id")
     private UserPanCardAndAdharDetailsEntity userPanAndAdharDetails;

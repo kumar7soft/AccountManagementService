@@ -24,6 +24,8 @@ public class UserDetails {
 
     private String zip;
 
+    private String email;
+
     private UserPanCardAndAdharDetails userPanAndAdharDetails;
 
     private UserLogin userLogin;

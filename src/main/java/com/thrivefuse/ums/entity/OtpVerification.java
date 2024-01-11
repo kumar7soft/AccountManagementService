@@ -1,7 +1,8 @@
 package com.thrivefuse.ums.entity;
 
-import jakarta.persistence.*;
 import lombok.Data;
+
+import jakarta.persistence.*;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 

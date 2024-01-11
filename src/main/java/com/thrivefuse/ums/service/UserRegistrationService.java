@@ -28,10 +28,9 @@ public class UserRegistrationService {
         }catch (Exception ex){
 
             System.out.println(ex.getMessage());
-            return true;
+            return false;
         }
-
-        return false;
+        return true;
     }
 
     public ResponseEntity<?> disableUser(String userName){
@@ -72,6 +71,7 @@ public class UserRegistrationService {
         userEntity.setCountry(userDetails.getCountry());
         userEntity.setCity(userDetails.getCity());
         userEntity.setZip(userDetails.getZip());
+        userEntity.setEmail(userDetails.getEmail());
 
         if (userDetails.getUserPanAndAdharDetails() != null) {
             UserPanCardAndAdharDetailsEntity panAdharEntity = new UserPanCardAndAdharDetailsEntity();

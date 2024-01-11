@@ -1,9 +1,8 @@
 package com.thrivefuse.ums.entity;
 
 
-import jakarta.persistence.*;
 import lombok.Data;
-
+import jakarta.persistence.*;
 @Entity
 @Table(name = "user_pan_adhar_details")
 @Data
