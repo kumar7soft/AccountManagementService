@@ -35,7 +35,10 @@ public class OtpGenerationService {
     }
 
     public boolean validateUserOtp(String otp,String type,String identifier){
-        Optional<OtpVerification> userOtpDetails = userOtpRepository.findByIdentifierAndType(identifier, type);
+        Optional<OtpVerification> userOtpDetails = userOtpRepository.findTopByIdentifierAndTypeOrderByCreatedAtDesc(identifier, type);
+        if(userOtpDetails.isEmpty()){
+            return false;
+        }
         String userOtp = userOtpDetails.get().getOtp();
         LocalDateTime otpExpiredTime = userOtpDetails.get().getExpiresAt();
         LocalDateTime currentTime = LocalDateTime.now();

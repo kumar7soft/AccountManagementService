@@ -58,6 +58,7 @@ public class UserValidatoinController {
         return notificationService.sendNotification(email);
     }
 
+    @GetMapping("/validateEmailOtp")
     public ResponseEntity<?> validateEmailOtp(String otp,String email){
 
         if(otpService.validateUserOtp(otp,"Email",email)){
